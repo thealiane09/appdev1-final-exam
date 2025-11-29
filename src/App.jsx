@@ -5,7 +5,7 @@ import Todos from "./pages/Todos"
 
 function App () {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/appdev1-final-exam">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
