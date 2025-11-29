@@ -21,7 +21,9 @@ function TodoItem ({ todo }) {
       marginBottom: '0.5rem',
       background: 'rgba(255, 255, 255, 0.1)',
       borderRadius: '50px',
-      listStyle: 'none'
+      listStyle: 'none',
+      backdropFilter: 'blur(10px)',
+      transition: 'all 0.3s ease'
     }}>
       <input 
         type="checkbox" 
@@ -35,6 +37,7 @@ function TodoItem ({ todo }) {
       />
       <span style={{
         flex: 1,
+        fontSize: '1rem',
         textDecoration: todo.completed ? 'line-through' : 'none',
         opacity: todo.completed ? 0.5 : 1
       }}>
@@ -50,7 +53,19 @@ function TodoItem ({ todo }) {
           background: 'rgba(255, 255, 255, 0.2)',
           color: 'white',
           fontSize: '1.5rem',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.background = 'rgba(255, 0, 0, 0.5)'
+          e.target.style.transform = 'scale(1.1)'
+        }}
+        onMouseOut={(e) => {
+          e.target.style.background = 'rgba(255, 255, 255, 0.2)'
+          e.target.style.transform = 'scale(1)'
         }}
       >
         ×
