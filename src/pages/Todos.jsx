@@ -32,6 +32,7 @@ function Todos () {
         <div style={{
             minHeight: '100vh',
             padding: '2rem',
+            transition: 'all 0.3s ease',
             ...themeStyles[theme]
         }}>
             {/* Theme Switcher */}
@@ -50,8 +51,10 @@ function Todos () {
                         borderRadius: '50%',
                         background: '#1e3c72',
                         border: theme === 'dark' ? '3px solid white' : 'none',
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        transition: 'transform 0.2s'
                     }}
+                    aria-label="Dark theme"
                 ></button>
                 <button 
                     onClick={() => setTheme('light')}
@@ -60,9 +63,11 @@ function Todos () {
                         height: '40px',
                         borderRadius: '50%',
                         background: '#f5f7fa',
-                        border: theme === 'light' ? '3px solid white' : 'none',
-                        cursor: 'pointer'
+                        border: theme === 'light' ? '3px solid #333' : 'none',
+                        cursor: 'pointer',
+                        transition: 'transform 0.2s'
                     }}
+                    aria-label="Light theme"
                 ></button>
                 <button 
                     onClick={() => setTheme('blue')}
@@ -72,8 +77,10 @@ function Todos () {
                         borderRadius: '50%',
                         background: '#667eea',
                         border: theme === 'blue' ? '3px solid white' : 'none',
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        transition: 'transform 0.2s'
                     }}
+                    aria-label="Blue theme"
                 ></button>
             </div>
 
@@ -81,7 +88,8 @@ function Todos () {
                 textAlign: 'center',
                 fontSize: '4rem',
                 fontWeight: '300',
-                margin: '4rem 0 2rem 0'
+                margin: '4rem 0 2rem 0',
+                letterSpacing: '2px'
             }}>Just do it.</h1>
 
             <AddTodoForm />
@@ -90,7 +98,8 @@ function Todos () {
             <div style={{
                 textAlign: 'center',
                 marginTop: '3rem',
-                opacity: 0.7
+                opacity: 0.7,
+                fontSize: '0.9rem'
             }}>
                 {new Date().toLocaleString('en-US', { 
                     month: '2-digit', 
