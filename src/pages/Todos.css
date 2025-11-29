@@ -1,0 +1,80 @@
+.todo-container {
+    min-height: 100vh;
+    padding: 2rem;
+    transition: background 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Dark Theme */
+.theme-dark {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+}
+
+/* Light Theme */
+.theme-light {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+}
+
+/* Blue Theme */
+.theme-blue {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-btn.active {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.theme-btn.dark {
+    background: #1e3c72;
+}
+
+.theme-btn.light {
+    background: #f5f7fa;
+}
+
+.theme-btn.blue {
+    background: #667eea;
+}
+
+/* Title */
+.todo-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 4rem 0 2rem 0;
+    letter-spacing: 2px;
+}
+
+/* Footer */
+.todo-footer {
+    text-align: center;
+    margin-top: 3rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
